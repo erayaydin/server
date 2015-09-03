@@ -8,7 +8,7 @@ return [
 	| Please provide this by its full URL including its protocol and its port
 	|
 	*/
-	'host'=>'https://127.0.0.1:2087',
+	'host' => env('WHM_HOST', 'https://127.0.0.1:2087'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ return [
 	| Copy and paste all of the string
 	|
 	*/
-	'auth'=>'your_long_string_hash_key',
+	'auth' => env('WHM_AUTH', 'your_long_string_hash_key'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -32,6 +32,6 @@ return [
 	| External API which is provided by CPanel/WHM
 	|
 	*/
-	'username'=>'root',
+	'username' => env('WHM_USERNAME', 'root'),
 
 ];
