@@ -6,7 +6,5 @@ Route::group(["middleware" => "guest"], function(){
 });
 
 Route::group(["middleware" => "auth"], function(){
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('/', ["as" => "dashboard.index", "uses" => "DashboardController@index"]);
 });
