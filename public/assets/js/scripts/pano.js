@@ -109,39 +109,42 @@ $(function() {
     // END REAL TIME CHART IMPLEMENTATION
 
     var g = new JustGage({
-        id: "gauge-red",
-        value: 46,
+        id: "gauge-loadavg",
+        value: loadavg,
         min: 0,
-        max: 100,
+        max: 4,
         showInnerShadow: false,
         showMinMax: false,
         gaugeColor: "#EAEAEA",
         levelColors:["#E74C3C","#E74C3C","#E74C3C"],
-        title: "RAM"
+        title: "Load Avg.",
+        label: "Using"
     });
 
     var g = new JustGage({
-        id: "gauge-green",
-        value: 67,
+        id: "gauge-disk",
+        value: diskused,
         min: 0,
-        max: 100,
+        max: maxdisk,
         showInnerShadow: false,
         showMinMax: false,
         gaugeColor: "#EAEAEA",
         levelColors:["#1ABC9C","#1ABC9C","#1ABC9C"],
-        title: "Swap"
+        title: "Disk Used",
+        label: "GB"
     });
 
     var g = new JustGage({
         id: "gauge-blue",
-        value: 25,
+        value: currentmail,
         min: 0,
-        max: 100,
+        max: maxmail,
         showInnerShadow: false,
         showMinMax: false,
         gaugeColor: "#EAEAEA",
         levelColors:["#3498DB","#3498DB","#3498DB"],
-        title: "CPU"
+        title: "Email Queue",
+        label: "Mail"
     });
 
 });

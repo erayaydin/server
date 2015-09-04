@@ -68,5 +68,8 @@
 <script src='{{ asset("assets/js/plugins/jquery.bootstrap.wizard.min.js") }}'></script>
 <script src='{{ asset("assets/js/plugins/jscrollpane.min.js") }}'></script>
 <script src='{{ asset("assets/js/application.js") }}'></script>
+
+<!-- Page Scripts -->
+@yield("page.js")
 </body>
 </html>
